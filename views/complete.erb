@@ -53,7 +53,7 @@
             <% name=params['name'] %>
             <% mail=params['mail'] %>
             <% tel=params['tel'] %>
-            <% content=params['content'] %>
+            <% content=params['content'].gsub(/\r\n|\r|\n/, "<br>") %>
             <tbody>
               <tr>
                   <td><%= company_name %></td>
@@ -65,7 +65,7 @@
             </tbody>
         <div class="text-center mb-4">
             <!-- 「戻る」ボタンを緑色にする設定を追加1 -->
-            <a href="contact.html" class="btn btn-success">戻る</a>
+            <a href="/" class="btn btn-success">戻る</a>
         </div>
     </div>
     <footer class="text-center pt-3 border-top">
